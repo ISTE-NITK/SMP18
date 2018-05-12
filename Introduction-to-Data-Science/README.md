@@ -10,6 +10,7 @@
 Inside the folder create a text file with your details.
 
     cd SMP18
+    cd Week-<X> // where X corresponds to the week number
     mkdir your-name
     cd your-name
 
