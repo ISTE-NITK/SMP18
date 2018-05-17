@@ -1,0 +1,64 @@
+1)
+Pros:
+1. It is easy to read and understand
+2. It is an Object oriented programming language 
+3. It has large standard libraries
+
+Cons:
+1. It is slow
+2. It has limitations with database access
+3. It is nearly impossible to build high-graphics 3D games
+
+
+2)
+Exponential operator(**)
+
+
+3)
+// is the floor division operator. It returns the quotient when its operands are divided. Ex: 5//2 = 2
+
+
+4)
+lis = list(input().split(" "))
+n = len(lis)
+if(n % 2 == 0):
+    i = n - 1
+else:
+    i = n
+while i > 0:
+    del lis[i-1]
+    i -= 2
+print(lis)
+
+
+
+5)
+lis = list(input().split(" "))
+n = len(lis)
+for i in range (n):
+    pos = i
+    for j in range (i + 1, n):
+        if int(lis[j]) < int(lis[pos]):
+            pos = j       
+    lis[pos], lis[i] = lis[i], lis[pos]
+print(lis)
+
+
+
+6)
+n = int(input())
+for i in range(n):
+    m = n - i - 1
+    for j in range(m):
+        print(" ", end = "")
+    for j in range(2 * i + 1):
+        print("*", end = "")
+    print()
+for i in range(n - 1):
+    for j in range(i + 1):
+        print(" ", end = "")
+    m = n - i - 1
+    for j in range(2 * m - 1):
+        print("*", end = "")
+    print()
+
