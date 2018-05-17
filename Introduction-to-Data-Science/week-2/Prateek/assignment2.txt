@@ -1,0 +1,43 @@
+1)
+Pros:
+a)Empsasis on code readibility
+b)Extremely capable to develop code used to combine components develop using other languages.
+c)Takes less time to develop than other languages. 
+cons:
+a)Slower to execute.
+
+2)
+Exponentiation
+
+3)
+// is called "Floor division operator" and  it return greates integer value less than (a/b).
+
+4)
+i=0;
+while i<len(my_list):
+	del my_list[i]
+	i+=2
+print(my_list)
+
+5)
+my_list=[2,5,1,6,7]  #bubble sort
+for i in range(0,len(my_list)):
+	for j in range(0,len(my_list)-1):
+		if my_list[j]>my_list[j+1]:
+			my_list[j],my_list[j+1]=my_list[j+1],my_list[j]
+print(my_list)
+
+6)
+for i in range(0,n):
+	for j in range(0,n-i-1):
+		print(' ',end='')
+	for k in range(0,2*i+1):
+		print('*',end='' )
+	print()
+for i in range(n-1,0,-1):
+	for j in range(0,n-i):
+		print(' ',end='')
+	for k in range(0,2*i-1):
+		print('*',end='')
+	print()
+
