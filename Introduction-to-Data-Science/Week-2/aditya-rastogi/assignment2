@@ -1,0 +1,47 @@
+1.
+Pros:
+a)Python is a high level language, works with interpreters and is thus, platform independent.
+b)Pyhton is a very easy to learn language.
+c)Object oriented programming language, has great benefits with modularity
+Cons:
+a) It is very slow in execution as compared to c,c++ or java.
+b) limitations with database access.
+c) extremely difficult to build a high-graphic 3D game using python 
+2.
+exponentiation operator(**)
+eg:-2**3=8
+3.
+// is the floor division operator.
+It is used to give the floor(round down) of the division rounded to the nearest integer below it. eg:- 10//4 = 2 (not 3 or 2.5)
+4.
+my_list=[int(x) for x in input("enter the list ").split()]
+print(len(my_list))
+mylist=[]
+for i in range(0,len(my_list)):
+	if(i%2 is 0):
+		mylist.append(my_list[i])
+print(mylist)
+5.
+my_list=[int(x) for x in input("enter the list ").split()]
+for i in range (0,len(my_list)-1):
+	for j in range(0,len(my_list)-1-i):
+		if(my_list[j]>my_list[j+1]):
+			my_list[j],my_list[j+1]=my_list[j+1],my_list[j]
+print(my_list)
+6.
+n = input("enter n ")
+n= int(n)
+for i in range(0,n):
+	for j in range(0,n):
+		if(i+j<n-1):
+			print(end = " ")
+	for k in range(0,(2*i+1)):
+		print("*",end="")			
+	print() 
+for i in range(0,n):
+	for j in range(0,n):
+		if(j<=i):
+			print(end = " ")
+	for k in range(0,(2*(n-2-i)+1)):
+		print("*",end="")			
+	print() 
