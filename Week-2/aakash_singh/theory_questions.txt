@@ -1,0 +1,20 @@
+question 1
+    Pros:
+        Python is very close to english language, thus fairly easy to read and write
+        Time is not wasted in compilation. Can be run on the go.
+        Same code can be run on all platforms with any need of optimisation.
+        Very popular. Yhis means the community is large and help is available readily. Also, libraries are available for almost all kinds of workloads.
+        Doesn't need declaration of variables.
+        Very concise code.
+
+    Cons:
+        Interpreter based language. This means that python is very slow compared to c++ or c language.
+
+question 2
+    ** exponentiation operator has the highest priority in an expression in python.
+    
+question 3
+    // is the integer division operator. Integer division in python rather than truncating the decimal digits, takes the floor of the obtained number.
+    Eg. in C++, -2/3=0 ,alse 2/3=0 (integer division)
+        in python -2//3=-1 and 2//3=0
+
