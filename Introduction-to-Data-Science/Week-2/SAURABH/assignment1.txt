@@ -1,0 +1,62 @@
+Ans-1
+PROS:
+1.The language has extensive support libraries.
+2.Python supports multiple systems and platforms.
+3.Python's syntax is easy to learn, so both non-programmers and programmers can start programming right away.
+CONS:
+1.Python is slower than C or C++.
+2.Python's memory consumption is also high.
+3.Python has limitations with database access .
+
+Ans-2
+Exponent(**) operator in python has the highest priority in an expression.
+
+Ans-3
+Floor division(//) operator gives the quotient when a is divided by b
+Ex. 10//3=3
+
+Ans-4
+code:
+my_list=[]
+n=int(input("enter no. of elements in the list   "))
+print("enter",n,"elements")
+for i in range(0,n):
+	p=input()
+	my_list.append(p)
+if n%2==0:	n=n-1
+for i in range(0,(n//2)+1):	
+	del my_list[i]
+print(my_list)
+
+Ans-5
+code:
+my_list=[]
+n=int(input("enter no. of elements in the list   "))
+print("enter",n,"elements")
+for i in range(0,n):
+	p=int(input())
+	my_list.append(p)
+for j in range(0,n-1):
+	for i in range(0,n-j-1):
+		if my_list[i]>my_list[i+1]:
+			my_list[i],my_list[i+1]=my_list[i+1],my_list[i]
+print(my_list)
+
+
+Ans-6
+code:
+n=int(input("enter n:"))
+for i in range(1,n+1):
+	for j in range(1,(n-i)+1):
+		print(" ",end="")
+	for k in range(1,2*i):
+		print("*",end="")
+	print()
+for i in range(1,n):
+	for j in range(1,i+1):
+		print(" ",end="")
+	for k in range(1,2*(n-i)):
+		print("*",end="")
+	print()
+
+
