@@ -1,0 +1,55 @@
+A1)
+Pros: 1. Code readability
+      2. High level
+      3. Capable of being used to develp glue code
+      4. Less time to develop code
+
+Cons: 1. Slower to execute
+
+A2)
+Exponentiation operator (**)
+
+A3)
+The 'Floor division' operator outputs only the whole number part of the division operation. For example, 10/4=2.5 whereas 10//4=2.
+
+A4)
+n = input('Input list length ')
+list = [] * 100
+for i in range(0,n):
+        j = input('Input value ')
+        list.insert(i,j)
+for i in range(1,(n/2)+1):
+        del list[i]
+print("The list after deletion of alternate entries is: ")
+print list
+
+A5)
+n = input('Input list length ')
+list = [] * 100
+for i in range(0,n):
+        j = input('Input element ')
+        list.insert(i,j)
+for i in range(0,n-1):
+        for j in range(i+1,n):
+                if list[i]>list[j]:
+                        temp = list[i]
+                        list[i] = list[j]
+                        list[j] = temp
+print("The sorted list is:")
+print list
+
+A6)
+n = input('Input n ')
+for i in range(1,n+1):
+	for j in range(0,(2*n)-1-i):
+                print " ",
+        for k in range(0,(2*i)-1):
+                print "*",
+        print "\n"
+for i in range(n-1,0,-1):
+        for j in range(0,(2*n)-1-i):
+                print " ",
+        for k in range(0,(2*i)-1):
+                print "*",
+        print "\n"
+
