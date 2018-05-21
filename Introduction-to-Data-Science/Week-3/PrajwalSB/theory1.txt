@@ -1,0 +1,8 @@
+1) if dict={'name':'abc','name'='def'}
+then dict will be equal to 'def' . Hence the latest value will be assigned to the duplicate key.
+
+2) type error as sets doen not support indexing!
+
+3) attribute error as tuple does not support pop function
+
+4) {'h','o','c'}
