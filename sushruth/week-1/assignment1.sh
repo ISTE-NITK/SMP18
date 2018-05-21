@@ -7,3 +7,4 @@ cost=`expr $star \* $star \+ $dia`
 sort -r file.txt
 echo "cost=$cost"
 
+
