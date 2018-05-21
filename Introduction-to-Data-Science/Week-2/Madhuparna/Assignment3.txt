@@ -1,6 +1,6 @@
 Q1:
 Solution:
-The last entry is considered as tge value of that key,no error is shown.
+The last entry is considered as the value of that key,no error is shown.
 
 Q2:
 Solution:
