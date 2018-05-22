@@ -1,0 +1,28 @@
+1. Execution speed of python is slow when compared to compiled languages.
+   It is easy to learn .
+2. ** ,exponential operator
+3. It is called floor division operator.
+ It is used in division that returns a whole number adjusted to left in the number line.
+4.list = input('enter the elements in the list').split()
+n=len(list)
+for i in range(0,n,2):
+	del list[i]
+print(list)
+5.list=input('enter the elements of list').split()
+n=len(list)
+list.sort(key=len)
+print(list)
+6.n=int(input("enter the value of n"))
+for i in range(0,n):
+	for j in range(0,(n-1-i)):
+		print(" ",end="")
+	for k in range(0,(i*2+1)):
+		print("*",end="")
+	print(" ")
+for i in range(1,n):
+	for j in range(0,i):
+		print(" ",end="")
+	for k in range(0,(n-i)*2-1):
+		print("*",end="")
+	print(" ")
+	
