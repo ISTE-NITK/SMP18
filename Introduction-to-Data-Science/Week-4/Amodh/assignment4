@@ -1,0 +1,29 @@
+1. ab+ mode is used to open the file for appending and reading in binary format. The file is opened with the pointer at the end of the file. If the mentioned file does not exist, then a new one is created.
+
+2. In python, while transferring data from file to the standard output or from standard input to file, the data is separated in packets and kept as buffers, of mentioned size. It is like an intermediate stage for data transfer. This is helpful when the retrieving data part takes more time than it is supposed to. Then, it is better to load of a huge packet of data into the buffer and retrieve data from it whenever needed.
+
+3. try:
+        a = 1/0
+        c = '@'
+        print(a)
+        print(int(c))
+    except ValueError as e:
+        print("Error:",e)
+    except ZeroDivionError as e:
+        print("Error:",e)
+    finally:
+        print("This is the end")
+        
+4. 
+f = open('text','r')
+s = []
+while True:
+    try:
+        s.append(f.readline())
+    except:
+        break
+f.close()
+p = open('output','w')
+for i in range(len(s)-1,-1,-1):
+    p.write(s[i])
+p.close()
