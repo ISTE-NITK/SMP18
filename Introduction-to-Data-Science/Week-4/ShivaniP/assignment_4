@@ -1,0 +1,35 @@
+1.ab+ mode opens a file for appending and reading in binary format.The file pointer is at the end of the file.
+
+2.While reading the file, the data in the file is transfered in an intermediate buffer before it is accessed by 
+python.This buffer signifies the size of the buffer used.
+
+3.
+   try:
+        a=1/0   #ZeroDivisionError
+        fh=open("python.txt",r)   
+        fh.readline()  #IOError
+        b=12
+   if(b>0)
+   print("greater than zero")  #IndentationError
+   if(c>b)
+         print("c greater than b")  #NameError
+   except IOError:
+        print("file not found!!!")
+   except ZeroDivisionError:
+        print("division by zero!!")
+   except NameError:
+        print("identifier not found!!!")
+
+4.
+file=open("file.txt",r+)
+list=[]
+file.seek(0,2)
+pos=file.tell()
+k=0
+file.seek(0,0)
+while k!=pos:
+      list.append(file.readline())
+      k=file.tell()
+file.close()
+for i in range(len(list),0,-1):
+        print(list[i])
