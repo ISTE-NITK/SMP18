@@ -1,0 +1,50 @@
+1).
+Keys must be unique in a dictionary. If there's a duplicate, the last entry with that key is taken.
+
+2).
+it will show an error as sets don't support indexing.
+
+3).
+tuples are immutable, they can't be edited. Therefore pop() won't work here.
+
+4).
+output:   {'c', 'h', 'o'}
+
+5).
+code:
+def fibonacci(n):
+    n1=1 
+    n2=1
+    print(1)
+    print(1)
+    n3=n1 + n2
+    for _ in range(3,n+1):
+        print(n3)
+        n1=n2
+        n2=n3
+        n3=n1 +n2
+        
+n=int(input('enter n : '))
+if(n==1):
+    print(1)
+elif(n==2):
+    print(1)
+    print(1)
+else:
+    fibonacci(n)
+
+6).
+import math       #for sqroot
+n=int(input('enter n : '))
+sqroot = lambda n: math.sqrt(n)
+print(sqroot(n))
+
+7).
+def sortbyvalue(list_1):
+    import operator
+    sorted_list = sorted(list_1.items(), key=operator.itemgetter(1))
+    print(sorted_list)
+    
+
+list_1={1:3,7:1,2:4,5:2}
+sortbyvalue(list_1)
