@@ -1,0 +1,28 @@
+1.
+ab+ mode is used to open a file for appending and reading in binary format.If file does not exist it is created.
+File pointer is located at end of file on opening.
+2.
+Buffering is useful when you don't know the size of file you are working with.
+If the file size is greater than computer memory then processing unit will not function properly.
+The buffer size tells how much data can be held at a time until it is used.
+3.
+try:
+	a=int(input("Enter no.\n"))
+	b=int(input("Enter divisor\n"))
+	file1=open(input("Enter file name to store quotient\n"),'r+')
+	file1.seek(0,2)	
+	file1.write(str(a/b))
+	file1.close()
+except IOError:
+	print("ERROR Enter valid filename")
+except ValueError:
+	print("ERROR enter integer")
+except ZeroDivisionError:
+	print("ERROR can't divide by zero")
+4.
+file1=open("abc.txt",'r')
+list1=file1.readlines()
+list1.reverse()
+for item in list1:
+	print(item,end="")
+file1.close()
