@@ -1,0 +1,21 @@
+1)
+it use to append a binary file
+
+2)
+all file that are opened are loaded into a buffer ,  it helps in efficient handling and if some error occures in handling orignal file remains safe
+
+3)
+try:
+	import phones.call
+except ImportError :
+	print("Some Error Ocurred while Imorting")
+d={1:'a',2:'b'}
+try:
+	print(d[3])
+except KeyError:
+	print("Erroe:Key Not Found")
+
+4)
+file1=open("sample.txt","r+")
+for line in reversed(list(file1)):
+	print(line,end="")
