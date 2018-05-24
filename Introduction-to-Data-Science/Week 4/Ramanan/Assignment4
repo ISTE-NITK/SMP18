@@ -1,0 +1,38 @@
+A1)
+ ab+ opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+
+
+A2)
+ In python, buffering is helpful when the retrieving data 4part takes more time than it is supposed to. Then, it is better to load of a huge packet of data into the buffer and retrieve data from it whenever needed.
+
+
+
+A3)
+ try:
+        a = 1/0
+        c = '@'
+        print(a)
+        print(int(c))
+    except ValueError as e:
+        print("Error:",e)
+    except ZeroDivionError as e:
+        print("Error:",e)
+    finally:
+        print("This is the end")
+      
+      
+        
+A4) 
+f = open('text','r')
+s = []
+while True:
+    try:
+        s.append(f.readline())
+    except:
+        break
+f.close()
+p = open('output','w')
+for i in range(len(s)-1,-1,-1):
+    p.write(s[i])
+p.close()
