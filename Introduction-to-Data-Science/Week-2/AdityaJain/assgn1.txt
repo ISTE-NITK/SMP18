@@ -1,0 +1,68 @@
+Q1. Pros - 1. Python is easy to read and easy to learn
+	2. It is an Object Oriented Programming language. At the same time it supports Procedural and Functional programming paradigams.
+	3. It provides a large collection of standard libraries
+Cons - 1. It is slow as it is an interpreted language.
+	2. It is not suitable for memory intensive tasks as it has a high memory usage due to its flexibilty.
+
+Q2. The parentheses () operator has the highest precendence.	
+
+Q3. //-Floor divison operator. It performs divison on the two operands and returns the greatest integer smaller than the
+	answer of the divison. If any one of the operands is of float type then the returned number is also of float type with 
+	zero as the fractional part. 
+	Eg : 11//6 = 1
+	     34.0//5 = 6.0
+	     -9.0//2 = -5.0
+
+Q4. Program to delete alternate elements in a given list
+
+#!/usr/bin/python3
+
+list=[]
+n=int(input('No. of elements : '))
+
+#Taking user input
+print('Input :')
+for i in range(0,n) :
+	list.append(input())
+print('Input list :\n',list)
+
+del list[1::2] #delete elements using extended slicing. Slice starting from index 1 to the end of the list in steps of 2
+
+#printing the new list
+print('Edited list :\n',list) 
+
+Q5. Program to sort a given a list
+
+#!/usr/bin/python3
+
+n,temp,list=int(input('Enter no. of elements : ')),0,[]
+
+#taking user input
+print('Input %d integers :'%n)
+for i in range(0,n) :
+	list.append(int(input()))
+print('Input : ',list)
+
+#sorting the list using Insertion Sort
+for i in range(1,n) :
+	j=i-1
+	while (list[j+1] < list[j] and j>=0) :
+		temp=list[j]
+		list[j]=list[j+1]
+		list[j+1]=temp
+		j-=1
+
+#printing sorted list
+print('Sorted list : ',list)
+
+Q6. Program to print the given star pattern.
+ 
+#!/usr/bin/python3
+
+n=int(input('Input n : ')) #taking user input
+
+#printing the pattern
+for i in range(1,n+1) :
+	print(' '*(n-i),end=("*"*(2*i-1)+"\n"))
+for i in range (n-1,0,-1) :
+	print(' '*(n-i),end=('*'*(2*i-1)+'\n'))

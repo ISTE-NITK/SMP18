@@ -1,0 +1,11 @@
+
+1. Pros: Its easy to read and understand the code in python compared to other languages. The flexibility and rich inbuilts functions along with third party available libraries allows easy coding of Machine learning and Artificial Intelligence algorithms. It also serves as a good glue code bewtween several languages like C,C++,Java.
+
+   Cons: Python Code is much slower than C,C++ and java. So it is less desired in Competitive Programming. Python is hard to secure, so its less used for making web applications. 
+
+2. The parentheses () has highest precedence among all operators.
+
+3. //: Floor Devision operator. a//b:- It gives floor value of a divided by b. 
+   Eg: 5//3=1, 100//3=33,-1//5=-1,-5//3=-2
+
+

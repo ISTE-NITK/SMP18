@@ -1,0 +1,33 @@
+Q1. Python does not allow duplicate keys. If a duplicate key is entered then the last entered value for the key becomes the value for that key in the dictionary.
+
+Q2. It'll throw an error. Sets are unordered data collections. They do not support indexing.
+
+Q3. It'll throw an error. Tuples are immutable sequences. They do not support pop().
+
+Q4. Output : {'c','h','o'}
+	The three characters in the output can be printed in any random order.
+
+Q5. Function to generate 'n' Fibbonacci numbers
+
+def fibonacci(n) :
+	a,b,l=0,1,[]
+	if(n>=1) :
+		l.append(0)
+	if(n>=2) :
+		l.append(1)
+	if(n>2) :
+		for i in range(3,n+1) :
+			a,b=b,a+b
+			l.append(b)
+	return l
+
+Q6. Anonymous function to find square root of a number
+
+lambda a:a**0.5
+
+Q7. Function to sort a given dictionary
+
+def sort_dict(d) :
+	for k,v in sorted(list(d.items()),key=lambda item:item[1]) :
+		print(k,'->',v)
+
