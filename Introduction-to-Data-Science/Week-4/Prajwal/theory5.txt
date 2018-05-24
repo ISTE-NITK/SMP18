@@ -1,0 +1,13 @@
+ab+ mode opens the file for appending and reading in binary format.If the file exists , it opens in append mode and file pointer is at the end of the file. If the file does not exist, it creates a new file for reading and writing.
+
+when a file is read, data is transferred to an intermediate buffer before it can be accessed by python, therefore buffer parameter signifies the size in bytes of the buffer used while reading. -ve value indicates default buffer size, 0 indicates no buffering.
+
+try:
+	print(1/0)
+except ZeroDivisionError:
+	print("Number cannot be divided by zero")
+try:
+	print(1+"a")
+except :
+	print("cannot combine different data type with + in print function")
+
