@@ -1,0 +1,8 @@
+
+1. ab+ mode opens a file in append and read mode in binary format. It sets the pointer at the end of the file. If file is not present, it opens a new file in read and write mode.
+
+
+2. When a file is opened, the entire file is stored in a temporary place in memory called buffer. All the data is first read or written to this buffer. When the file is closed, an EOF character is appended to this buffer and everything on the buffer is written onto the file. It is used to speeden up the process of writing or reading from a file as it will be very slow to access the file directly from the secondary memory everytime a change is done on the file.
+
+
+
