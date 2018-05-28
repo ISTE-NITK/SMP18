@@ -1,0 +1,26 @@
+q1) only 1 of the key value pair is considered.The duplicate is discarded.
+q2)error(sets dont support indexing).
+q3)error(tupple object doesn't have a pop attribute).
+q4){'c','h','o'}
+q5)def fibo(n):
+   n1=1
+   n2=1
+   print()
+   print(n1)
+   print(n2)
+   count=1
+   while(count<=n-2):
+      n3=n1+n2
+      print(n3)
+      n1=n2
+      n2=n3
+      count=count+1
+n=int(input("enter n"))
+fibo(n)
+q6)
+import math
+p=lambda x:math.sqrt(x)
+print(p(25))   
+q7)
+dict1={1:3,7:1,2:4,5:2}
+print(sorted(dict1.values()))    
