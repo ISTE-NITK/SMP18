@@ -1,0 +1,69 @@
+Ans-1:
+A class describes the contents of the objects that belong to it,it describes an aggregate of data fields (called instance variables), and defines the operations (called methods). 
+
+Ans-2:
+An object is an element (or instance) of a class.Objects have the behaviors of their class.
+
+Ans-3:
+An object exhibits the property and behaviors defined by its class.
+
+Ans-4:
+class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+Ans-5:
+A method is a function that takes a class instance as its first parameter.
+
+Ans-6:
+self is needed to distinguish between instances(objects).
+
+Ans-7:
+ __init__ is a special method in Python classes, it is the constructor method for a class.
+
+Ans-8:
+With the help of inheritance,we don,t need to write a code of child class again which prevents in code duplication.
+
+Ans-9:
+import random
+
+class card():
+	suit={"Hearts":['A',2,3,4,5,6,7,8,9,10,'J','Q','K'],"Diamonds":['A',2,3,4,5,6,7,8,9,10,'J','Q','K'],"Clubs":['A',2,3,4,5,6,7,8,9,10,'J','Q','K'],"Spades":['A',2,3,4,5,6,7,8,9,10,'J','Q','K']}
+class deck_of_card(card):
+	def shuffle_(self):
+		if(len(card().suit["Hearts"])+len(card().suit["Diamonds"])+len(card().suit["Clubs"])+len(card().suit["Spades"])==52 ):
+			print("ALL CARD PRESENT")
+		for i in card().suit:
+			random.shuffle(card().suit[i])
+	def deal(self,card_suit,card_no):
+		print("dealt card is ",card_suit,card_no)
+		card().suit[card_suit].remove(card_no)
+
+
+Ans-10:
+class person:
+	def __init__(self,fname,lname,phone_no,*email):
+		self.first_name=fname
+		self.last_name=lname
+		self.phone_no=phone_no
+		self.email=email
+class address_book(person):
+	addbook=[]
+	def __init__(self,info):
+		self.add_contact(info)
+	def add_contact(self,info):
+		self.addbook.append(info)
+	def lookup_contact(self,lname,fname="none"):
+		for i in self.addbook:
+			if(fname=="none"):			
+				if(i.last_name==lname):
+					print(i.first_name,i.last_name,i.phone_no,i.email)
+			else:
+				if(i.last_name==lname and i.first_name==fname):
+					print(i.first_name,i.last_name,i.phone_no,i.email)
+
+
+
