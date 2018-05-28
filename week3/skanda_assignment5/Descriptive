@@ -1,0 +1,33 @@
+
+1. A class is single entity or type in which all the related data and methods are contained.
+
+
+2. An object is a variable of the type class.
+
+
+3. An instance is a variable of the class type. It can access the data and the methods which the class contains.
+
+
+4. syntax:
+
+class ClassName (InheritedClass):  #InheritedClass opional
+    #methods
+    #attributes 
+
+
+5. Methods are functions defined inside a class which can only be used by an object of that class or object of any class that has inherited the original class.
+
+
+6. Self is an argument passed to the methods which help in differentiating various objects of the same class.
+
+
+7. The __init__() method is a constructor which is implicitly called whenever an object is created. Its primary function is to allocate memory for the object.
+
+
+8. Suppose class A and B need same data and methods except that B requires additional attributes. Instead of maintaining the two different copies of the same functions and data in A and B, B can be inherited from A. This prevents duplicaton of code in B.
+
+
+
+
+
+     
