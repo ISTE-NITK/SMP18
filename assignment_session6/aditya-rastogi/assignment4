@@ -1,0 +1,54 @@
+1.
+A class is a mechanism for users to create their own type. A class is a type and its implementation.
+2.
+A variable of a class is called an object.
+3.
+Objects or instances are used to implement a class.They are variables of the (type) class.
+They are used to call methods and variables of the class outside the class.
+4.
+class className:
+                #methods and variables to be declared
+5.
+A method is a piece of code that is called by a name that is associated with an object.
+6.
+The self keywprd in python is used to identify between different objects of the same class.
+This works only if the variables declared also use the self keyword.
+7.
+It is the self initialization method of the class and is called implicitly on object creation.
+8.
+Inheritance allows the sharing of code between classes as the base class' code is shared with the super class but not vice versa.
+It must be noted that in order for this to occur the __init method of the base class nust be called explicitly in the __init method of the super class.
+This allows the sharing of code and objects of the super class can directly call methods of the base class.
+9.
+import random
+class card():
+	list1=['A',2,3,4,5,6,7,8,9,10,'J','Q','K']
+	suit={"Hearts":list1,"Diamonds":list1,"Clubs":list1,"Spades":list1}
+class deck_of_card(card):
+	def shuffle(self):
+		if(len(card().suit["Hearts"])+len(card().suit["Diamonds"])+len(card().suit["Clubs"])+len(card().suit["Spades"]) is 52):
+			print("FULL")
+		for i in card().suit:
+			random.shuffle(card().suit[i])
+	def deal(self,card_suit,card_no):
+		print("card dealt is",card_suit,card_no)
+		card().suit[card_suit].remove(card_no)
+10.
+class person:
+	def __init__(self,fname,lname,phoneNo,*email):
+		self.firstName=fname
+		self.lastName=lname
+		self.phoneNo=phoneNo
+		self.email=email
+class address_book(person):
+	book=[]
+	def add_contact(self,info):
+		self.book.append(info)
+	def lookup_contact(self,lname,fname="none"):
+		for i in self.book:
+			if(fname=="none"):			
+				if(i.lastName==lname):
+					print(i.firstName,i.lastName,i.phoneNo,i.email)
+			else:
+				if(i.lastName==lname and i.firstName==fname):
+					print(i.firstName,i.lastName,i.phoneNo,i.email)           
