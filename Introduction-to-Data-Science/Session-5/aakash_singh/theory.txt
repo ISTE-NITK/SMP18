@@ -1,0 +1,7 @@
+q1:
+    ab+ mode expands to append binary read and write.
+    The file at default opens with cursor at EOF in binary mode and can be read or written to.
+
+q2.
+    buffering means that python is not directly interfacing with the OS's representation of a file or its file system.
+    Instead only a chunk of data is read from the raw OS filestream into a buffer.
