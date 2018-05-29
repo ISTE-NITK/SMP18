@@ -1,0 +1,55 @@
+1. Pros:
+a)Python is a high level language
+b)It has great readability.
+c) It is extremely effective as "glue' code, to join parts coded in different languages.
+d)It is very easy to learn and code can be developed much faster.
+
+Cons:
+a) It is very slow to execute.
+
+
+2. Exponentiation operator (**)
+
+
+3. // is called the floor division operator. It basically rounds off the answer we get after dividing to greatest integer lesser than or equal to the answer.
+So 10//4=2, not 2.5
+
+
+4.
+print("Enter the list members")
+l = input(">>>").split()
+ans = []
+for i in l:
+   if (i not in ans):
+        ans.append(i)
+print("The list without alternate entries is:", end="")
+print(ans)
+
+
+5.
+print("Enter the list members")
+l = input(">>>").split()
+for i in range(len(l)-1):
+    for j in range(len(l)-1-i):
+        if l[j] > l[j+1]:
+            l[j], l[j+1] = l[j+1], l[j]
+print("The sorted list is:", end="")
+print(l)
+
+
+6.
+print("Enter n")
+n = int(input(">>>"))
+for i in range(1,n+1):
+    for j in range(n-i):
+        print(end=" ")
+    for j in range(2*i-1):
+        print("*",end="")
+    print()
+for i in range(1,n):
+    for j in range(i):
+        print(end=" ")
+    for j in range(2*(n-i)-1):
+        print("*",end="")
+    print()
+    

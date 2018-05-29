@@ -1,0 +1,60 @@
+SOL (1):
+pros of Python-
+1.It is easy to code and learn.
+2. Python is a good high-level language and is capable of being used combine components developed using Java/C/C++.
+cons of Python-
+1. It is slow.
+2. It restricts design.
+
+SOL (2):
+exponential operator (**).
+
+SOL (3):
+The // operator represents floor division. It performs normal division and gives the output as an integer.
+It is also called an integer division.
+
+SOL (4):
+code:
+lst=[2,4,5,1,7,8,20,12]
+
+def remove_alt_elements(lst):
+    del lst[1::2]    #using slice method
+
+remove_alt_elements(lst)
+print(lst)
+
+
+SOL (5):
+
+the_list=[2,5,1,9,4]   #let this be the list
+def bubblesort(my_list):
+    for i in range(0,len(my_list)-1):
+        for j in range(0,len(my_list)-1-i):
+            if my_list[j] > my_list[j+1]:
+               my_list[j], my_list[j+1] = my_list[j+1], my_list[j] 
+
+    return my_list
+
+print(bubblesort(the_list))
+
+SOL (6):
+
+n=int(input('enter n : '))
+for i in range(0,n):
+	for j in range(0,n-i-1):
+		print(' ',end='')
+	for k in range(0,2*i+1):
+		print('*',end='' )
+	print()                    #for new line
+	
+for i in range(n-1,0,-1):
+	for j in range(0,n-i):
+		print(' ',end='')
+	for k in range(0,2*i-1):
+		print('*',end='')
+	print()
+    
+
+
+
+ 

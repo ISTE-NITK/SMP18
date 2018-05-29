@@ -1,5 +1,0 @@
-1. Execution speed of python is slow when compared to compiled languages.
-   It is easy to learn .
-2. ** ,exponential operator
-3. It is called floor division operator.
- It is used in division that returns a whole number adjusted to left in the number line.

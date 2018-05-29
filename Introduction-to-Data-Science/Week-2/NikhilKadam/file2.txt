@@ -1,0 +1,41 @@
+1. Pros:It is high-level, interpreted programming language which provides emphasis  to code-readability. Code development takes less time as compared to   C++ orJava.
+  Cons:Python code takes more time to execute as compared to C++ or Java.
+2. The exponential operator (**) has the highest precedence in an expression.
+3. The // operator represents floor division. It performs normal division and 
+   then floors the answer and gives the output as an integer.
+4. Suppose given list is mylist
+ for i in range(0,len(mylist)):
+ if(i%2):
+ print(mylist[i])
+5. Suppose given list is mylist
+ for i in range(0,len(mylist)):
+ for j in range(1,len(mylist)-i):
+ for j in range(1,len(mylist)-i):
+ if(list[j-1]>list[j])
+ temp=list[j-1]
+ list[j-1]=list[j]
+ list[j]=temp
+6. code is as follows:- 
+n=input("Enter the value of n\n")
+n=int(n)
+	for i in range(0,n):
+	for j in range(0,n):
+	if(i+j>=n-1):
+print("*",end="")
+	else:
+print(" ",end="")
+	for j in range(0,i):
+print("*",end="")
+print("")
+	for i in range(0,n-1):
+	for j in range(0,n):
+	if(j>i):
+print("*",end="")
+	else:
+print(" ",end="")
+	for j in range(0,n-2-i):
+print("*",end="")
+print("")
+ 
+
+
