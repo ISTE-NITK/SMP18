@@ -1,0 +1,28 @@
+q1)Opens a file for both appending and reading in binary format. The file pointer is at the
+end of the file if the file exists. The file opens in the append mode. If the file does not
+exist, it creates a new file for reading and writing.
+q2)Every file when read, transfers data to an intermediate buffer before it can be accessed by Python.
+q3)try:
+   a=5/0
+   f=open("abc.txt",'r')
+   f.readline()
+except IOError:
+
+   print ("Error: can't find file")
+
+except ZeroDivisionError:
+
+   print("Division by zero error")
+
+
+
+q4)
+import os
+lines = []
+with open('text.txt') as f:
+    lines = f.readlines()
+with open('newtext.txt', 'w') as f:
+    for line in reversed(lines):
+        f.write(line)
+remove("text.txt")
+rename("newtext.txt","text.txt")
