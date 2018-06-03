@@ -1,0 +1,31 @@
+Ans 1. A class is a user defined blue print of an object. It defines the instance variables and the methods associated with the object.
+
+Ans 2. An object is a defined enitity having a particular a state (instance variables) and behaviour(methods) linked to it. It is an instance of a class.
+
+Ans 3. A class is the blue print for an object. An object is called an instance of the class as it is built using the class that defines it.
+
+Ans 4. Syntax :
+	
+	class class_name:
+		body of the class containg function definitions and attributes..
+	Eg. -
+	
+	class Shark:
+		def swim(self):
+			print("Swimming")
+
+Ans 5. A method is a function defined inside a class. They are functions that are memebers of a class and take a class instance as their first parameter.
+
+Ans 6. The self parameter is a reference to the object that is calling the method. Whenever an object calls one of its methods, Python internally calls the method using the class name passing the calling object as an argument to the function. The self parameter is used to recieve the argument. So basically, it used to identify different objects of the same class.
+**Note : self is not actually a defined keyword in Python. Any other valid Python name other than self can also be used to name the parameter, but it is a convention to use the name self.
+
+Ans 7. The __init__ method is used to initialize a newly created object. It is the Python equivalent of a constructor in C/C++.
+
+Ans 8. One of the major concepts of OOP is inheritance. It is a mechanism in which a class derives (inherits) some of its attributes and methods from another class. The class that inherits from another class is called derived class or sub class, and the class from which the sub class inherits is called super class. This faicilitates reuse of code as new classes can be created using existing old classes without writing seperate code for the new class.
+
+Ans 9. In file a9_assgn2.py
+
+Ans 10. In file a10_assgn2.py
+
+
+

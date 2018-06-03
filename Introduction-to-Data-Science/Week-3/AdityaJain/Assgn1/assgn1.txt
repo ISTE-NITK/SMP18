@@ -1,0 +1,20 @@
+Ans 1. The 'ab+' mode opens a file for both appending and reading in binary format. The file pointer is placed at the end of the file for appending. A new file is created if it does not exist.
+
+Ans 2. In python a file can be opened using a buffer. When a buffer is used, instead of reading directly from the file saved on the disk, chunks of data are first transferred into the buffer from the file and the data is then read from the buffer. This decreases the latency while reading from the file and allows the user to read the data at any desired rate.
+
+Ans 3. 
+	def facto(n):
+		try :
+			if(type(n) is not int):
+				raise TypeError
+			if(n<0):
+				raise ValueError
+		except:
+			print("Only non-negative integers allowed")
+		else:
+			if(n==0):
+				return 1
+			return n*(n-1)
+
+Ans 4. In file a4_assgn1.py
+
