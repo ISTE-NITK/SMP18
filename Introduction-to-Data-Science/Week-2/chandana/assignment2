@@ -1,0 +1,103 @@
+Q6)
+
+n=int(input())
+
+h=0
+
+for i in range(1,n+1):
+
+    k=n
+
+    while(k>h):
+
+        print(" ",end="")
+
+        k=k-1
+
+    for j in range(0,2*i-1):
+
+        print("*",end="")
+
+    h=h+1
+
+    print()
+
+h=1
+
+i=n
+
+while(i>=1):
+
+    k=0
+
+    while(k<h):
+
+        print(" ",end="")
+
+        k=k+1
+
+    for j in range(0,2*i-1):
+
+        print("*",end="")
+
+    
+h=h+1
+
+    i=i-1
+
+    print()
+q1)
+pros:
+
+1.Python is easy to learn for even a novice developer. Its code is easy to read and you can do a lot of things just by looking at it. Also, you can execute a lot of complex functionalities with ease, thanks to the standard library.
+2.Supports multiple systems and platforms.
+3.Object Oriented Programming-driven
+
+cons:
+1.Python is slow
+2.Python is not a very good language for mobile development.
+3.Python is not a good choice for memory intensive tasks.
+
+q2)
+**(exponentiation)
+
+q3)
+floor division operator
+returns the integral part of the quotient
+
+q4)
+#sorting a list
+a = [16, 19, 11, 15, 10, 12, 14]
+
+
+
+for j in range(len(a)):
+
+    i = 0
+
+    while i<len(a)-1:
+
+        
+        if a[i]>a[i+1]:
+ 
+           
+            a[i],a[i+1] = a[i+1],a[i]
+            
+            
+        
+                i = i+1
+    
+    
+    
+
+print (a)
+
+
+Q5)
+my_list=[1,2,3,4,5,6,7,8]
+
+for i in range(0 , int(len(my_list)/2)):
+
+    del my_list[i]
+
+print(my_list)

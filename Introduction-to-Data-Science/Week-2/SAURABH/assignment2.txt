@@ -1,0 +1,40 @@
+Ans-1
+If a duplicate key is entered in a dictionary,the original key's value will get updated to a new value.
+
+Ans-2
+It will give error as sets does not support indexing.
+
+Ans-3
+It will give error as tuples can't be edited.
+
+Ans-4
+it will print a set containing 'c','h'and 'o' in any random order.
+
+Ans-5
+code:
+def fibo(n):
+	if(n==0):
+		return 0
+	if(n==1):
+		return 1
+	else:
+		return (fibo(n-1)+fibo(n-2))
+n=int(input("enter n  "))
+for i in range(0,n):
+	print(fibo(i))
+
+Ans-6
+code:
+n=int(input("enter n  "))
+sroot = lambda n:	n**(0.5);
+print("square root of",n,"is",sroot(n))
+
+Ans-7
+code:
+dict1={15:7,16:7,9:6,14:5,17:8}
+dict = sorted(dict1,key=dict1.get)
+dict2={}	
+for i in dict:
+	dict2[i]=dict1[i]
+dict1=dict2
+print(dict1)

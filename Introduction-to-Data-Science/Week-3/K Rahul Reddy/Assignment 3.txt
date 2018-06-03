@@ -1,0 +1,46 @@
+1)
+Only the last entry with that key is taken.
+Ex:- 
+dictionary = {'Name':'A', 'roll':1, 'Name':'B'}
+print(dictionary)	#{'roll':1, 'Name':'B'}
+
+
+2)
+Error.
+There is no indexing for sets.
+
+
+3)
+Error.
+Tuple object doesnot have pop.
+
+
+4)
+{'c', 'h', 'o'}
+
+
+5)
+def fibonacci(n):
+	f1 = 1
+	f2 = 1
+	for i in range(n):
+		print(f1)
+		f2 = f1 + f2
+		f1 = f2 - f1
+
+
+6)
+import math
+sqrt = lambda n: math.sqrt(n)
+print(sqrt(int(input())))
+
+
+7)
+def by_value(obj):
+    return d[obj]
+def sort(d):
+    ans = {}
+    values = d.values()
+    keys = sorted(d, key = by_value)
+    for i in keys:
+        print(i, ':', d[i], sep = "")

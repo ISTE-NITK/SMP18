@@ -1,0 +1,16 @@
+q1:
+    The last entered key value pair is included in 
+    the dictionary and the rest key(duplicate key) 
+    value pairs are discarded.
+
+q2:
+    Error occurs since data items aren't stored in 
+    any specific order in a set hence indexing is 
+    notsupported.
+
+q3:
+    pop method is not supported by tuple item.
+    will produce error.
+
+q4:
+    {'c','h','o'}

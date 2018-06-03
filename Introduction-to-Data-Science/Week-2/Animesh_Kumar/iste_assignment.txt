@@ -1,0 +1,4 @@
+1. The key will refer to the latest value and no error will be there.
+2. error message as 'set' object does not support indexing.
+3 error message as 'tuple' object has no attribute 'pop'
+4. {'o', 'h', 'c'} or any other order of the elements.
