@@ -1,0 +1,71 @@
+1.
+  import numpy as np
+  import pandas as pd
+* set1=player_match['Season_year'].unique()
+  for i in set1:
+     print('Season:',i,end=' ')
+     total_players=len(player_match[player_match.Season_year==i]['Player_Name'].unique())
+     print('percentage of young players:',len(player_match[(player_match.Age_As_on_match<25)&(player_match.Season_year==i)]['Player_Name'].unique())/total_players)
+  for i in set1:
+     print('Season:',i,end=' ')
+     team_name=max(player_match[(player_match.Season_year==i)&(player_match.Age_As_on_match<25)]['Player_team'].unique())
+     print('Team having maximum young players:',team_name)
+
+* data=player_match[player_match.Age_As_on_match<25]['Player_Name'].unique()
+  data1=player_match[(player_match.Age_As_on_match<25) & (player_match.is_manofThematch==1)]['Player_Name'].unique()
+  print("percentage :",len(data1)/len(data))
+
+2.
+  if len(player_match['Batting_hand'].value_counts())==5:
+    player_match['Batting_hand']=player_match['Batting_hand'].\
+                                            map({'Right-hand bat':'Right-handed','\xa0Right-hand bat':'Right-handed',
+                                                 'Left-hand bat':'Left-handed','xa0Left-hand bat':'Left-handed'})
+  tot=len(player_match['Batting_hand'])
+  right_handed=len(player_match[(player_match.Batting_hand=='Right-handed')&(player_match.is_manofThematch==1)])
+  left_handed=len(player_match[(player_match.Batting_hand=='Light-handed')&(player_match.is_manofThematch==1)])
+  if right_handed>left_handed:
+      print("Right-handed players perform better than Left-handed players")
+  else:
+      print("Left-handed players perform better than Right-handed players")
+
+  if len(player_match['Bowling_skill'].value_counts()==21):
+    player_match['Bowling_skill']=player_match['Bowling_skill'].\
+        map({ 'Right-arm offbreak':'Spin','Right-arm medium':'pace',
+        'Right-arm fast-medium':'pace','Legbreak googly':'pace',
+        'Right-arm medium-fast':'pace','Left-arm fast-medium':'pace',
+        'Slow left-arm orthodox':'Spin','Right-arm fast':'pace',
+        'Slow left-arm chinaman':'Spin','Left-arm medium-fast':'pace',
+        'Legbreak':'Spin','Right-arm bowler':'pace','Left-arm medium':'pace',
+        'Left-arm fast':'pace','\xa0Left-arm fast':'pace','\xa0Right-arm fast-medium':'pace',
+        'Right-arm medium fast':'pace','\xa0Right-arm medium-fast':'pace',
+        '\xa0Right-arm offbreak':'Spin','\xa0Legbreak':'Spin'
+     })
+   spin=len(player_match[(player_match.Bowling_skill=='Spin')&(player_match.is_manofThematch==1)]['Player_Name'].unique())
+   pace=len(player_match[(player_match.Bowling_skill=='pace')&(player_match.is_manofThematch==1)]['Player_Name'].unique())
+   if spin<pace:
+       print("Pace bowlers bowl better than Spin bowlers")
+   else:
+       print("Spin bowlers bowl better than Pace bowlers")
+  
+3.
+  def createteam():
+    print("Best team")
+    print(player_match[(player_match.Batting_hand=='Right-handed')&(player_match.is_manofThematch ==1)]['Player_Name'][:2])
+    print(player_match[(player_match.Batting_hand=='Left-handed')&(player_match.is_manofThematch ==1)]['Player_Name'][:2])
+    print(player_match[(player_match.Role_Desc=='Keeper')&(player_match.is_manofThematch ==1)]['Player_Name'][:1])
+    print(player_match[(player_match.Batting_hand!='NaN')&(player_match.Bowling_skill!='NaN')&(player_match.is_manofThematch ==1)]['Player_Name'][4:5])
+    print(player_match[(player_match.Bowling_skill=='pace')&(player_match.is_manofThematch==1)]['Player_Name'][5:8])
+    print(player_match[(player_match.Bowling_skill=='Spin')&(player_match.is_manofThematch==1)]['Player_Name'][1:3])
+
+4.
+set1=player_match['Season_year'].unique()
+for k in range(len(set1)):
+    teamname=player_match[(player_match.Season_year==set1[k])]['Player_team'].unique()
+    count=player_match[(player_match.Player_team==teamname[0])&(player_match.Opposit_Team==teamname[1])&(pm.IsPlayers_Team_won==1)]['Match_Id'].value_counts()
+    for i in range(len(teamname)):
+        for j in range(len(teamname)):
+            s=player_match[(player_match.Player_team==teamname[i])&(player_match.Opposit_Team==teamname[j])&(pm.IsPlayers_Team_won==1)]['Match_Id'].value_counts()
+            if(len(count)<len(s)):
+                wt=i
+                lt=j
+    print(teamname[wt],"won most of their matches against",teamname[lt],"in the season",set1[k])
