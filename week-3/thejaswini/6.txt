@@ -1,0 +1,80 @@
+1. class is a type and implementation.
+
+2. A variable of the class type is called an object.
+
+3. Instances are the objects that has all the attributes(members and methods) described in the class definition.
+
+4.class class_name:
+	def method_name(self,arguments):
+		pass
+
+5.A method is a function that takes a class instance as its first parameter. Methods are members of classes. 
+
+6. self refers to a newly created object in init method and in other class methods,refers to the instance whose method was called.
+
+7. init method is called when an object is created from the class and it allow the class to initialize the attributes of a class.
+
+8.inheritance helps one to access the methods in one class from another without having to repeat the same code in the second class.
+
+9.
+import random
+class deck:
+	def __init__(self):
+		self.cards = []
+	def deal(self):
+		#self.cards =[card(c,value) for value in range(14) for c in range(4)]
+
+		
+		for i in range(0,13):
+			for j in range(4):
+				t=deck.card(j,i)
+				self.cards.append(t.mm())
+		random.shuffle(self.cards)
+	class card:
+		values =['A',2,3,4,5,6,7,8,9,10,'J','Q','K']
+		suits=['hearts','diamonds','clubs','spades']
+		def __init__(self,suit,value):
+			self.suit=suit
+			self.value=value
+		def mm(self):
+			return (str(self.values[self.value])+'for'+str(self.suits[self.suit]))
+10.
+class person:
+	def __init__(self,first_name,last_name,phone_number,email):
+		self.first_name=first_name
+		self.last_name=last_name
+		self.phone_number=phone_number
+		self.email=[]
+		self.email=email
+class address_book:
+	def __init__(self):
+		self.count=0
+		self.adr_bk=[]
+		self.adr_
+	def add_contact(self,first_name,last_name,phone_number,email):
+		adr_bk.append(person(first_name,last_name,phone_number,email))
+	def lookup_contact(self,last_name):
+		for obj in self.adr_bk:
+			if last_name is obj.last_name:
+				print(first_name,last_name,phone_number,email)
+				self.count+=1
+			else:
+				pass
+		if self.count>1:
+			for obj in self.adr_bk:
+				if last_name is obj.last_name and first_name is obj.first_name:
+					print(first_name,last_name,phone_number,email)
+				print(first_name,last_name,phone_number,email)
+				self.count+=1
+			else:
+				pass
+		if self.count>1:
+			
+			print("enter the first_name to narrow down 
+
+
+		
+
+		
+		
+
