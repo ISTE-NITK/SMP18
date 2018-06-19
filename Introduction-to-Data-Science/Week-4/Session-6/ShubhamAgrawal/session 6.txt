@@ -1,0 +1,80 @@
+1.
+A class is a way to bind the data describing an entity and its associate functions together.
+
+2.
+An instance, in object-oriented programming (OOP), is a specific realization of any object.
+It is an element of a class which inherits its properties.
+
+3.
+An object is an instance of a class where the class represents the definition of some real-world entity.
+A variable of the class type is called an object.
+
+4.
+class CLASSNAME:
+	<statement_1>
+	.
+	.
+	<statement_n>
+
+5.
+A method is a function that takes a class instance as its first parameter.
+Methods are members of classes.
+
+6.
+Use of self helps python differentiate between objects.
+
+7.
+__init__ is a special method in Python classes, it is the constructor method for a class. 
+
+8.
+We dont have to define all the attributes and methods in another class again, thus it prevents 
+redundancy and code duplication
+
+9.
+import random		//for shuffle
+class card():
+    suits={"Hearts":["A","2","3","4","5","6","7","8","9","10","J","Q","K"],
+	"Diamonds":["A","2","3","4","5","6","7","8","9","10","J","Q","K"],
+	"Clubs":["A","2","3","4","5","6","7","8","9","10","J","Q","K"],
+	"Spades":["A","2","3","4","5","6","7","8","9","10","J","Q","K"]}
+
+class deck_of_cards(card):
+	def deal(self,card_suit,card_name):
+		card().suits[card_suit].remove(card_name)
+
+	def shuffle_method(self):
+		if(len(card().suit["Hearts"])+len(card().suit["Diamonds"])+
+			len(card().suit["Clubs"])+len(card().suit["Spades"])==52):
+			print("Deck complete")
+		
+		for i in card().suits:
+			random.shuffle(card().suits[i])
+
+10.
+class person():
+	def __init__(self,first, last,phone_no, email):
+		self.firstname = first
+		self.lastname = last
+		self.phonenumber = phone_no
+		self.email = email
+
+class address_book(person):
+	add_book[]
+	def __init__(self,data):
+		self.add_contact(data)
+	
+	def add_contact(self,data):
+		self.add_book.append(data)
+	
+	def lookup_contact(self,last,first = "NULL"):
+		print("enter last name:")
+		for i in self.add_book:
+			if(first=="NULL"):
+				if(i.last == last):
+					print(i.firstname,i.lastname,i.phonenumber,i.email)
+				else:
+					if(i.firstname==first and i.lastname==last):
+						print(i.firstname,i.lastname,i.phonenumber,i.email)	
+		
+	
+	
