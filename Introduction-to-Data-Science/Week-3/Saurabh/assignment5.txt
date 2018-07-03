@@ -1,0 +1,33 @@
+Ans-1
+opens a file for both appending and reading in binary format.
+
+Ans-2
+Every file when read,transfers data to an intermediate bufferbefore it can be accessed by python.
+
+Ans-3
+code:
+try:
+	file=open("file.txt","r")
+	a=1/0
+except IOError:
+	print("Error: file doesn't exist")
+except ZeroDivisionError:
+	print("Zero Division Error")
+except SyntaxError:
+	print("Syntax Error")
+
+
+
+
+Ans-4
+code:
+file=open("qn4.txt",'r')
+my_list=[]
+while True:
+	line=file.readline()
+	my_list.append(line)
+	if not line:
+		break
+for i in range(len(my_list)-1,-1,-1):
+	print(my_list[i])
+
