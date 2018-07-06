@@ -1,0 +1,28 @@
+q1:
+    Class implements the OOP concept in python. It provides a way to encapsulate all data and methods related to an object into one package.
+
+q2:
+    An instance in python is a class object that has all the attributes described in the class definition.
+
+q3:
+    A class defines how the object should work and all its attributes.
+    An instance is the implementation of the class definition in a code.
+
+q4:
+    class newClass(inheritClass):
+        attributes
+
+q5:
+    any function that is defined inside the class of the object is called a method of the object.
+
+q6:
+    self is a way in python class to refer to the attributes of the object.
+    This helps segregate method parametres from the object member functions.
+
+q7:
+    __init__ is a method which is equivalent to a constructor in c++.
+    __init__ is called whenever a new object of the class is formed and it initializes the object.
+
+q8:
+    the derived class inherits from a base class. In this process the the attributes of the base class are available to the object of the derived class.
+    This prevents code duplication and encourages code reuse.
