@@ -1,0 +1,27 @@
+1)
+Opens file for both appending and reading in binary format. If file does not exist, it creates new file for reading and writing.
+
+
+2)
+Buffer is the intermediate used while accessing files in python. This increases the ease of accessing and decreases latency.
+
+
+3)
+try:
+        f = open("1.txt", "r")
+        print(int(f))
+        a = 5/0
+except IOError:
+        print("A")
+except TypeError:
+        print("B")
+except ZeroDivisionError:
+        print("C")
+
+
+4)
+f = open("a.txt", "r")
+lines = f.readlines()
+for i in range(len(lines)-1, 0, -1):
+        print(lines[i], end = "")
+

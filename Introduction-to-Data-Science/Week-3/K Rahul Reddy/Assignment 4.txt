@@ -1,0 +1,111 @@
+1)
+Class is a mechanism to make our own type. It is a collection of data and functions.
+
+
+2)
+Object is a variable of type class.
+
+
+3)
+Class is the data type and instance is a variable of this type.
+
+
+4)
+class classname:
+	//member data
+
+	//member functions
+
+
+5)
+Method or member function is a function that is defined in a class and works on the data of the class.
+
+
+6)
+self isused to identify between different objects of the same class. self needs to be used with both functions and variables inclasses.
+
+
+7)
+In python, __init__() function(initializer) is implicitly called every time a object is created. It is added to every class definition by default.
+
+
+8)
+class student:
+	def __init__(self, name, roll):
+		self.student_name = name
+		self.rollno = roll
+	def details(self):
+		print("Name : " + self.student_name)
+		print("Roll no. : " + self.rollno)
+
+class library(student):
+	def __init__(self, name, roll, bookid):
+		student.__init__(self, name, roll)
+		self.isbn = bookid
+	def issue_details(self):
+		self.details()
+		print("Book id : " + self.isbn)
+
+student1 = student("Ramesh", "1282")
+student1.details()
+
+book_issue = library("Suresh Raina", "1285", "978-3-16-148410-1")
+book_issue.issue_details()	
+
+In this example, library class inherits from student class. Without inheritance, details function should have been duplicated.
+In this way, inheritance of classes helps us avoid duplication of code.
+
+
+9)
+import random
+class card:
+	def __init__(self, suit, value):
+		self.suit = suit
+		self.value = value
+
+class deck:
+	def __init__(self):
+		self.suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
+		self.values = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
+		self.cards = [card(suit, value) for suit in self.suits for value in self.values]
+	def deal(self):
+		print(self.cards[0])
+		del self.cards[0]
+	def shuffle(self)
+		if len(self.cards != 52):
+			self.cards = [card(suit, value) for suit in self.suits for value in self.values]	//Making sure the deck has 52 cards 
+		random.shuffle(self.cards)
+
+
+10)
+class person:
+	def __init__(self, firstname, lastname, phone, email):
+		self.first_name = firstname
+		self.last_name =lastname
+		self.phoe_number = phone
+		self.email = email
+class address_book:
+		
+	contacts = []
+
+	def add_contact(self):
+		fn = input("Enter first name : ")
+		ln = input("Enter last name : ")
+		phone = input("Enter phone number : ")
+		email = input("Enter emails : ").split()
+		self.contacts.append(Person(fn, ln, phone, email))
+
+	def lookup_contact(self, lastname, firstname = ""):
+		print_stat = 0
+		if firstname == "":
+			for contact in self.contacts:
+				if contact.last_name == lastname:
+					print_stat = 1
+					print(contact)	
+		else:
+			 for contact in self.contacts:
+                                if contact.last_name == lastname and contact.first_name == firstname:
+                                        print(contact)
+					print_stat = 1
+		if print_stat == 0:
+			print("Contact not found")
