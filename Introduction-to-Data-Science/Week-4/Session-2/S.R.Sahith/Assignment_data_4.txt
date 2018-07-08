@@ -1,0 +1,61 @@
+1.A class is prototype that defines the variable and the methods common to all objects of certain kind.
+2.An object is a software bundle of related variables and methods.An object is an instance of a class.
+3.class is the mould that provides the structure for creating objects.Classes are the factories of object.In real life objects from same factory will have same attributes with same values, In OOP objects from same class will have same attributes but with different values.(Class is a blue print for object)
+4.Python syntax for defining a new class:
+	class NewClass:
+		#attributes
+		#methods
+5.A method in object-oriented programming is a procedure associated with a class. A method defines the behavior of the objects that are created from the class. Another way to say this is that a method is an action that an object is able to perform. The association between method and class is called binding.
+6.self is an object reference to the object itself. self in Python may be used to deal with custom object. self is used to distinguish between objects.
+7.__init__ is a special method in Python classes, it is the constructor method for a class. __init__ is called when ever an object of the class is constructed.
+8.Methods and Attributes of the parent class can be used by all its inherited child classes which avoids code duplication
+9.
+from random import shuffle
+class Card:
+    def __init__(self,suit,value):
+        self.suit=suit
+        self.value=value
+class Deck:
+    def __init__(self):
+        self.colors = ['Heart', 'Diamonds', 'Spades', 'Clubs']
+        self.values=['A',2,3,4,5,6,7,8,9,10,'J','Q','K']
+        self.deck = [Card(color,value) for color in self.colors for value in self.values]
+    def shuffleCards(self):
+        if len(self.deck)==52:
+            shuffle(self.deck)
+        else:
+            print(len(self.deck))
+    def dealCard(self):
+        print(self.deck[0].suit,self.deck[0].value)
+        self.deck.pop(0)
+		
+10.
+class Person:
+    def __init__(self,first_name,last_name,phone_number,*email):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.phone_number = phone_number
+        self.email=email
+class AddressBook:
+    contacts = []
+    def addContact(self):
+        first_name=input("enter the  first_name")
+        last_name=input("enter the last_name")
+        phone_number=input("enter the phone number")
+        email=input("enter list of emails").split( )
+        self.contacts.append(Person(first_name,last_name,phone_number,email))
+    def lookupContact(self,lastName,firstName=""):
+        j = 0
+        if firstName != "":
+            for i in self.contacts:
+                if firstName == i.first_name and lastName == i.last_name:
+                    print(i.first_name," ",i.last_name," ",i.phone_number," ",i.email)
+                    j+=1
+        else:
+            
+             for i in self.contacts:
+                if lastName == i.last_name:
+                    print(i.first_name," ",i.last_name," ",i.phone_number," ",i.email)
+                    j+=1
+        if j == 0:
+            print("contact not available")
