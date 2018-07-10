@@ -1,0 +1,11 @@
+echo "input file content:"
+cat $1
+line=$(wc -l $1)
+star=$(head -3 $1|grep the |wc -l)
+diamond=$(tail -n+4 $1|grep for |wc -l)
+cost=$(( $star*$star + $diamond ))
+echo "output"
+a=$(head -3 $1|sed 's/the/it/')
+b=$(tail -n+4 $1|sed 's/for/when/')
+echo -e "$a\n$b"|sort -r
+echo "cost=$cost"

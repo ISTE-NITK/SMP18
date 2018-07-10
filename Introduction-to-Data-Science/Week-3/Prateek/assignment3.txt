@@ -1,0 +1,40 @@
+1)
+onle last entered pair in retained and other duplicates are discarded
+
+2)
+error, set does not support indexing
+
+3)
+error , tuple is imutable datastructure
+
+4)
+{ 'c','h','o'}
+
+5)
+def fib(n):
+	if(n<=1):
+		return n
+	else:
+		return(fib(n-1)+fib(n-2))
+my_list=[]
+n=#desired value
+for i in range(0,n+1):
+	my_list.append(fib(i))
+print(my_list)
+
+6)
+sqrt=lambda n:n**0.5
+
+7)
+sort_dictionary={}
+my_list=[]
+for i in dictionary:
+	my_list.append(dictionary[i])
+print(my_list)
+my_list.sort()
+print(my_list)
+for i in my_list:
+	for j in dictionary:
+		if(dictionary[j]==i):
+			sort_dictionary[j]=i
+print(sort_dictionary)

@@ -1,0 +1,46 @@
+1) If a duplicate key is entered during initialization of a dictionary, the value of the key will be overwritten.
+
+2) An error will be generated because sets do not support indexing.
+
+3) An error will be generated because elements of a tuple cannot be deleted.
+
+4) {'c','o','h'}
+
+5)
+n=input("Enter the value of n")
+n=int(n)
+def fibo(n):
+    print(0,1,end=' ')
+    a=1
+    b=0
+    for i in range(3,n+1):
+        s=a+b
+        b=a
+        a=s
+        print(s,end=' ')
+fibo(n)
+
+6)
+n=input()
+n=int(n)
+print(n**0.5)
+sqrt = lambda n : n**0.5
+print(sqrt(n))
+
+8)
+dict={9:99,6:66,5:55,7:33,1:45,4:34}
+def val(a):
+    key=set()
+    key.update(a)
+    l=list(key)
+    x={}
+    for i in range(0,len(l)):
+        y=a[l[i]]
+        x[y]=l[i]
+    sort=sorted(x)
+    r={}
+    for i in range(0,len(sort)):
+        r[x[sort[i]]]=sort[i]
+    print(r)
+val(dict)
+

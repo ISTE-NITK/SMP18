@@ -1,0 +1,12 @@
+1. If duplicate values are given during initialization, the right most value will be taken as the value to that particular key.
+
+
+2. It will give an error. Indexing is not allowed on sets.
+ 
+
+3. It will give an error. pop() attribute in sets dont take any values.
+
+
+4. {'c','h','o'}
+
+

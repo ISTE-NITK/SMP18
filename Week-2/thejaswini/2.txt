@@ -1,0 +1,27 @@
+1.if duplicate key is entered ,the second key-value pair will overwrite the first pair as dictionary can have only one valu eper key
+
+2.error,sets don't support indexing.
+
+3.8.
+
+4.{'c','h','o'}
+
+5.l1=0
+m1=1
+def fibonacci(l,m):
+	return l+m
+n=int(input('enter the value of n')
+print(l1)
+print(m1)
+for i in range(0,n):
+	temp = fibonacci(l1,m1)
+	print(temp)
+	l1=m1
+	m1=temp
+
+6.import math
+sqroot = lambda n: math.sqrt(n);
+
+7.
+def sort_dict(numbers):
+	sorted_d = sorted(numbers.items(), key=operator.itemgetter(1))

@@ -1,0 +1,39 @@
+1. It assigns the last value to the key.
+  Dictionary={'name':4,'name':7}
+  print(Dictionary)   #{'name':7}
+
+2.Error.Set is an unordered collection of data. Hence no indexing.
+
+3.Error.Tuples are immutable.(ie no value can be edited or deleted in a tuple)
+
+4.set(['h','c','o'])
+
+5.
+def fib(n):
+       n1=1
+       n2=1
+       print(n1);
+       print(n2);
+       for i in range(1,n+1):
+                n3=n2+n1
+                print(n3)
+                n1=n2   
+                n2=n3
+
+6.
+   square_root=lambda num:num**0.5
+
+7.
+def sort(dict):
+    print("{",end="")
+
+    for value in sorted(dict.values()):
+
+        for key in dict.keys():
+
+            if dict[key]==value:
+
+                print(key,end=":")
+
+                print(value,end=",")
+    print("}")

@@ -1,0 +1,47 @@
+Provided: 
+Dataset showing onset of diabetes in patient. It describes patient medical record data and whether they had an onset of diabetes within five years.
+
+Relevant Information:
+      Several constraints were placed on the selection of these instances from
+      a larger database.  In particular, all patients here are females at
+      least 21 years old.  ADAP is an adaptive learning
+      routine that generates and executes digital analogs of perceptron-like
+      devices.  It is a unique algorithm; see the paper for details.
+
+Number of Attributes: 8 plus class
+
+For Each Attribute: (all numeric-valued)
+   1. Number of times pregnant
+   2. Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+   3. Diastolic blood pressure (mm Hg)
+   4. Triceps skin fold thickness (mm)
+   5. 2-Hour serum insulin (mu U/ml)
+   6. Body mass index (weight in kg/(height in m)^2)
+   7. Diabetes pedigree function
+   8. Age (years)
+   9. Class variable (0 or 1)
+
+Missing Attribute Values: Yes
+
+Class Distribution: (class value 1 is interpreted as "tested positive for
+   diabetes")
+
+Objective and task:
+It is a binary classification problem. You have to build and train an Artifical Neural Network model that is able to predict reliably if a person is likely to have diabates or not based on the information available of the patient.
+
+Use the train.csv to train your neural network.
+Use your trained model then to predict results using the test.csv
+
+Files to submit
+- results.csv (specifications for the same given below)
+- script.py (code for the same)
+- snapshot.jpg (containing a screenshot of the output for train.csv, i.e, number of epochs, loss etc)
+
+Submission File Format
+You should submit a results.csv file with exactly 181 entries. Your submission will show an error if you have extra columns or rows and thus not counted.
+
+The file should have exactly 1 column:
+Class variable (contains your binary predictions: 1 for tested positive, 0 for tested negative)
+
+Metric
+Your score is the percentage of passengers you correctly predict. This is known simply as "accuracy”.
