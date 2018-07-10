@@ -1,0 +1,56 @@
+Q1:
+Solution:
+ab+ mode is for append and open or creat binary file for updating ans reading and writing
+at the end of the file.
+
+Q2:
+Solution:
+When a file is read the data is transferred to a buffer.
+Instead of accessing the file from where it is saved which might
+take a longer time it is better to load the file in a buffer in memory.
+While opening a file a negative value of buffer refers to default buffer size,
+while zero indicates no buffering.
+
+Q3:
+Solution:
+	a) 			try:
+					file=open("hh.txt","r")
+					file.readline()
+				except:
+					print("Could not open")
+
+	b)
+				try:
+					a=a+10
+				except:
+					print("Name 'a' not defined")
+					
+Q4:
+Solution:
+code:
+
+import os
+f=open("nn.txt","w+")
+print(f.name)
+f.write("Hello\n File Handling \n in Python\n")
+f.close()
+f=open("nn.txt","r+")
+s=f.readlines()
+print(s)
+s.reverse()
+
+f.close()
+f=open("nn.txt","w+")
+​
+for item in s:
+    f.write(item)
+f.close()
+f=open("nn.txt","r+")
+print(f.readlines())
+f.close()
+
+
+Output:
+nn.txt
+['Hello\n', ' File Handling \n', ' in Python\n']
+[' in Python\n', ' File Handling \n', 'Hello\n']
