@@ -1,0 +1,19 @@
+1. ab+ mode opens a file for both appending and reading in binary format. The file pointer is at the end of the file if file exists. The file opens in the append mode.If the file doesn't exist ,it creates a new file for reading and writing.
+2. the buffer point is default .
+3.
+try:
+	import xyzzzz
+	number=int(input("enter 3 numbers and strings"))
+except ValueError:
+	print("invalid literal for int()with base 10")
+except ImportError:
+	print("No module found")
+4.
+file=open("t.txt","r+")
+lst= file.readlines()
+file.close()
+lst.reverse()
+file=open("w.txt","w+")
+for li in lst:
+	file.write(li)
+file.close()
