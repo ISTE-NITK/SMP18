@@ -1,0 +1,29 @@
+1.
+Opens a file for both appending and reading in binary format. The file pointer is at the
+end of the file if the file exists. The file opens in the append mode. If the file does not
+exist, it creates a new file for reading and writing.
+
+2.
+Every file when read, transfers data to an intermediate buffer before it
+can be accessed by Python, this makes the process faster and reduces the risk of data loss while handling data.
+
+3.
+	t=1/0
+	file1=open(input("Enter name of the file\n"),'r+')
+	file1.seek(0,2)	
+	file1.write(t)
+	except IOError:
+		print("ERROR Enter valid filename")
+	except ZeroDivisionError:
+		print("ERROR can't divide by zero")
+	else:
+		print("everything's fine")
+		file1.close()
+
+4.
+file1=open("to_reverse.txt",'r')
+list1=file1.readlines()
+list1.reverse()
+for item in list1:
+	print(item,end="")
+file1.close()
