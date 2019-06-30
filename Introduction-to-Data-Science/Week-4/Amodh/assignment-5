@@ -1,0 +1,77 @@
+1.  In python, a class is a code template for creating an object.
+
+2. An object is an implementation of a class. It is basically a bundle of data members upon which certain methods can be implemented.
+
+3. A class is like the blueprint of the object. So we can say the object is an implementation of the class.
+
+4. syntax:
+class class_name:
+    def __init__(self,variables...):
+        statements
+    def method1:
+        ...
+   def method2:
+        ...
+   .
+   .
+   .
+   def methodn:
+    ...
+ 
+5. A method is a function which can be executed solely by an object of the class it belongs to.
+
+6. self is used to refer to the object which called the specific methd being talked about.
+
+7. __init__ method acts as a constructor of the class.
+
+8. If we have two different classes with some common features, say Employee amd Person, we can avoid going through the process of defining code for them separately by defining the code in one class(Person) and makinf the other one(Employee) inherit from it. That way we are reducing redundancy of code and also saving time.
+
+9. 
+from random import shuffle
+class Card:
+    def __init__(self,suit,val):
+        self.suit = suit
+        self.val = val
+        
+    def display(self, cont = False): #cont is to know if cards are being displayed continuously. False by default
+        valdict = {1:'A' , 2:'2', 3:'3', 4:'4', 5:'5', 6:'6', 7:'7', 8:'8',9:'9',10:'10',11:'J', 12:'Q',13:'K' }
+        suitdict = {1:'H' , 2: 'D' , 3:'C', 4:'S' }
+        if cont:
+            print(valdict[self.val],suitdict[self.suit], sep = "", end = " ")
+        else :
+            print(valdict[self.val],suitdict[self.suit], sep = "", end = "\n")
+
+class Deck(Card):
+    def __init__(self):
+        self.deck = list()
+        for i in range(1,5):
+            for j in range(1,14):
+                self.deck.append(Card(i,j))
+    
+    def isFull(self):
+        if len(self.deck)==52:
+            return True
+        else:
+            return False
+    
+    def shuf(self):
+        if self.isFull():
+            print("Deck full.\nShuffle successful.")
+            shuffle(self.deck)
+        else:
+            print("Deck not full. Missing {:d} cards.\nShuffle unsuccessful.".format(52-len(self.deck)))
+    
+    def deal(self):
+        x = self.deck[0]
+        self.deck.remove(x)
+        return x
+    
+    def display(self):
+        for i in range(len(self.deck)):
+            if i%13==0:
+                print(" ")
+            self.deck[i].display(True)
+        print("")
+        
+        
+10. 
