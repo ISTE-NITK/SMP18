@@ -1,0 +1,71 @@
+1)
+A class is group of different data types and funtions that share a common property
+
+2)
+Variable of Class is instance(object)
+
+3)
+Using instance we acess public members of class
+
+4)
+class classname:
+	#class members
+
+5)
+A method is a piece of code that is called by name that is associated with an object 
+
+6)
+self heps to distuinguish different objects of same class
+
+7)
+__init__ method creates and initialize object of class
+
+8)
+using inheritance we donot need to write a method again for child class that already exist in parent class and avoid code duplication
+
+9)
+import random
+class card():
+	suit={"Hearts":['A',2,3,4,5,6,7,8,9,10,'J','Q','K'],"Diamoond":['A',2,3,4,5,6,7,8,9,10,'J','Q','K'],"Clubs":['A',2,3,4,5,6,7,8,9,10,'J','Q','K'],"Spades":['A',2,3,4,5,6,7,8,9,10,'J','Q','K']}
+class deck_of_cards(card):
+	def shuffled(self):
+		if(len(card().suit["Hearts"])+len(card().suit["Diamoond"])+len(card().suit["Clubs"])+len(card().suit["Spades"])==52 ):
+			print("All card present")
+		for i in card().suit:
+			random.shuffle(card().suit[i])
+	def deal(self,card_suit,card_name):
+		print("dealt card is ", card_name," of ",card_suit)
+		card().suit[card_suit].remove(card_name)
+#Sample Input:
+"""b=card()
+a=deck_of_cards()
+a.shuffled()
+a.deal("Hearts",'A')
+print(b.suit)"""
+
+10)
+class person:
+	def __init__(self,first_name,last_name,phone_number,*email):
+		self.first_name=first_name
+		self.last_name=last_name
+		self.phone_number=phone_number
+		self.email=email
+class address_book(person):
+	book=[]
+	def __init__(self,details):
+		self.add_contact(details)
+	def add_contact(self,details):
+		self.book.append(details)
+	def lookup_contact(self,last_name,first_name="None"):
+		for i in self.book:
+			if(first_name=="None"):
+				if(i.last_name==last_name):
+					print(i.first_name,i.last_name,i.phone_number,i.email)
+			else:
+				if(i.last_name==last_name and i.first_name==first_name):
+					print(i.first_name,i.last_name,i.phone_number,i.email)
+#Sample Input:
+#a=person("Prateek","Sahu",9753612488,["ps1337@gmail.com","1337@gmail.com"])
+#address_book(a)
+#c=person("anukul","Sahu",9753612488,["ps1337@gmail.com","1337@gmail.com"])
+#address_book(c).lookup_contact("Sahu","anukul")
