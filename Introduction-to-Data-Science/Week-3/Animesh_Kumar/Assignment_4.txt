@@ -1,0 +1,57 @@
+1. Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state.
+2. It is an object that has all of the attributes (methods and members) described in the class definition. When it's created a special method is invoked (called __init__) that performs object set up (and might also invoke the parent class set up). The newly created instance has its own place in memory, and through that reference you may invoke instance methods (methods that look like def foo(self, ...)) and access (or update) members (e.g., my_object.some_member).
+3. A class defines the properties and behavior for the objects represented by the abstraction.A class thus denotes a category of objects and act as a blueprint for creating such objects. An object exhibits the property and behaviors defined by its class.
+4. class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+5. A method is a function that takes a class instance as its first parameter.
+6. self represents the instance of the class. By using the "self" keyword we can access the attributes and methods of the class in python. __init__ is a special method in Python classes, it is the constructor method for a class.
+7. "__init__" is a reseved method in python classes. It is known as a constructor in object oriented concepts. This method called when an object is created from the class and it allow the class to initialize the attributes of a class.
+8. Inheritance allows the method and attributes to be shared among various classes. These are inherited from the superclassby the subclass.
+Thus the same code can be used nultiple times. Hence inheritance prevents code duplication.
+9. import random
+import itertools
+class card():
+    suits=["Hearts","Spades","Clubs","Diamonds"]
+    ranks=["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+    deck = list(' '.join(card) for card in itertools.product(suits, ranks))
+class deck_of_card(card):
+    def shuffle1(self):
+        if len(card().deck)!=52:
+            print("Insuitable deck")
+        else:
+            for n in card().deck:
+                k=n.split(" ")
+                if (k[0] in["Heart","Spades","Clubs","Diamonds"] and k[1] in ["A","2","3","4","5","6","7","8","9","10","J","Q","K"])==False:
+                    print("Insuitable deck")
+                    break
+            else:
+                print("Deck is fine")
+                random.shuffle(card().deck)
+    def deal(self):
+	    print(card().deck[0])
+	    del card().deck[0]
+10.class person:
+	def __init__(self,f_name,l_name,phone_no,*email):
+		self.FirstName=f_name
+		self.LastName=l_name
+		self.PhoneNo=phone_no
+		self.email=email
+class address_book(person):
+	add_book=[]
+	def __init__(self,info):
+		self.add_contact(info)
+	def add_contact(self,info):
+		self.add_book.append(info)
+	def lookup_contact(self,l_name,f_name="none"):
+		for i in self.add_book:
+			if(f_name=="none"):			
+				if(i.LastName==l_name):
+					print(i.FirstName,i.LastName,i.PhoneNo,i.email)
+			else:
+				if(i.LastName==l_name and i.FirstName==f_name):
+					print(i.FirstName,i.LastName,i.PhoneNo,i.email)
+
