@@ -1,0 +1,56 @@
+1.Class is a datatype and implementation.
+
+2.A variable of class type is called object.
+
+3.An object of a class type is used to access methods and variables of the class.
+
+4.Syntax:
+   class class_name:
+                     #list of methods and attributes
+
+5.A method is procedure associated with an object and a message.
+   
+6.self keyword is used to identify between two different objects of the same class.
+
+7.The method __init__() is called initializer and it is called implicitly whenever an object of the class is 
+created. It is customized to a specific initial value.
+
+8.When a derived class inherits from a base class, the methods and attributes from the base class is now available in derived class.
+Hence we need not type the same code to do the same job.
+
+9.
+  class card:
+           suit={"Hearts":[A,2,3,4,5,6,7,8,9,10,J,Q,K],"Diamonds":[A,2,3,4,5,6,7,8,9,10,J,Q,K],"Clubs":[A,2,3,4,5,6,7,8,9,10,J,Q,K],
+           "Spades":[A,2,3,4,5,6,7,8,9,10,J,Q,K]}
+           
+  class deck_of_cards(card):
+           def deal(self,suit_name,card_no):                       
+                      self.suit[suit_name].remove(card_no)
+           def shuffle(self):
+                    if(len(suit["Heart"])+len(suit["Diamonds"])+len(suit["Clubs"])+len(suit["Spades"])==52)
+                        for i in suit:
+                              self.random.suit[i]
+ 
+10.
+class person:
+           def __init__(self,first_name,last_name,phone_no,email):
+                  self.fn=first_name
+                  self.ln=last_name
+                  self.pn=phone_no
+                  self.em.append(email)
+           
+class address_book(person):
+          address=[]
+          def add_contact(self,data_list):
+                  self.address.append(data_list)
+          def lookup_contact(self,l_n,f_n=""):            
+                  for i in self.address:
+                         if(f_n==""):
+                               if(i.ln==l_n):
+                                       print("",end=" ")  
+                                       print(i.fn,i.ln,i.pn,i.em,end="\n")
+                         else:
+                               if(i.ln==l_n and i.fn==f_n):
+                                       print("",end=" ")  
+                                       print(i.fn,i.ln,i.pn,i.em,end="\n")
+                                        
